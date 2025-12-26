@@ -1,0 +1,35 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "",
+    "Metadata": {
+
+    },
+    "Parameters": {
+      "InstanceType": {
+          "Description": "Choose Instance Type",
+          "Type": "String",
+          "Default": "t2.micro",
+          "AllowedValues": ["t2.micro","m1.small","m1.large"]
+      }
+
+    },
+    "Mappings": {
+
+    },
+    "Conditions": {
+
+    },
+    "Resources": {
+      "myVPC": {
+        "Type": "AWS::EC2::VPC",
+        "Properties": {
+          "CidrBlock": "10.20.0.0/16",
+          "Tags": []
+        }
+      }
+
+    },
+    "Outputs": {
+
+    }
+}
